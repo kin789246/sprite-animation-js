@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ga-kin63 at 2023-08-21">
+    <title>SPRITE ANIMATION</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <canvas id="game_canvas"></canvas>
+    <script src="prng.js"></script>
+    <script src="gameobject.js"></script>
+    <script src="potion.js"></script>
+    <script src="game.js"></script>
+
+    <script>
+        let game = new Game('game_canvas');
+        window.onload = function() {
+            game.set_canvas();
+            game.create_world();
+            window.requestAnimationFrame((time_stamp) => game.run(time_stamp));
+        }
+        window.onresize = function() {
+            game.set_canvas();
+        }
+    </script>
+</body>
+
+</html>

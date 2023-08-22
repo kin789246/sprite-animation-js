@@ -1,0 +1,8 @@
+#game_canvas
+{
+    background-color: cyan;
+    border-color: brown;
+    border-style: solid;
+    position: relative;
+    left: 10vw; 
+}
